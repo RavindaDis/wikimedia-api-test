@@ -41,10 +41,11 @@ mvn -version
 ```bash
 mvn clean test -DtestSuite=api_regression.xml
 ```
+Tests can be executed using an IDE by running the src/test/resources/test-suites/api_regression.xml file as well.
 
 ## Test Result Analysis
 ### Reporting
-- A report will be created after each execution in: './test-output/' folder or the Allure Report tab if executed via Jenkins
+- A report will be created after each execution in: './test-output/' folder.
 
 ### Logging
 - Log files will be created after each execution with time stamp in: './test-output/Test Execution Logs' folder
@@ -72,7 +73,7 @@ In the project main is broken into 3 packages
 ### test
 - Consists with the API test classes and their helper classes
 #### resources
-- api-test-suites directory includes all the testNG runner files for API tests
+- test-suites directory includes all the testNG runner files for API tests
 - config.properties file which consists with the property values
 ### test-output
 - Created after a test execution

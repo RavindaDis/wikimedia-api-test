@@ -14,13 +14,13 @@ import static org.hamcrest.Matchers.*;
 
 public class PageDetailsTest extends ApiBase {
 
-    @Test(groups = {Constants.API_REG, Constants.PAGE_TEST})
-    public void validatePageDetails(){
+    @Test(groups = {Constants.PAGE_TEST})
+    public void validatePageDetails() {
         String title = "Sesame Street";
         String pageKey = getPageKeyFromTitle(title);
 
         sendGetRequestWithPath(PAGE_DETAILS_ENDPOINT, pageKey)
-            .then()
+                .then()
                     .log().everything()
                     .assertThat()
                     .statusCode(SC_OK)

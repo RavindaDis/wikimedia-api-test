@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.hasItem;
 public class SearchContentTest extends ApiBase {
 
     @DataProvider
-    public Object[][] dataProviderSearchValidations() {
+    public Object[][] dpSearchValidations() {
         return new Object[][]{
                 // search text, expected title
                 {"furry rabbits", "Sesame Street"},
@@ -20,7 +20,7 @@ public class SearchContentTest extends ApiBase {
         };
     }
 
-    @Test(dataProvider = "dataProviderSearchValidations", groups = {Constants.API_REG, Constants.SEARCH_TEST})
+    @Test(dataProvider = "dpSearchValidations", groups = {Constants.SEARCH_TEST})
     public void validateSearchContent(String searchQuery, String expectedTitle) {
         sendGetRequestWithQuery("q", searchQuery, SEARCH_CONTENT_ENDPOINT)
                 .then()

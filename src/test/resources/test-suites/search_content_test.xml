@@ -7,7 +7,7 @@
         <listener class-name="org.testng.reporters.TestHTMLReporter"/>
         <listener class-name="org.testng.reporters.EmailableReporter2"/>
     </listeners>
-    <test name="API tests for search">
+    <test name="API tests for Search Content">
         <groups>
             <run>
                 <include name="search-test"/>
