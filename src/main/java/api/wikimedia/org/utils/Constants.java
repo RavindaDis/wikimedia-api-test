@@ -7,6 +7,7 @@ public class Constants {
 
     private Constants() {
     }
+
     //TestNG test group names
     public static final String SEARCH_TEST = "search-test";
     public static final String PAGE_TEST = "page-test";

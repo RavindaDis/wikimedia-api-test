@@ -26,7 +26,7 @@ pipeline {
         stage('Test Execution') {
             steps {
                 // Run Maven on a Unix agent.
-                sh "mvn clean test -Dsurefire.suiteXmlFiles=./src/test/resources/api-test-suites/search_test.xml"
+                sh "mvn clean test -DtestSuite=api_regression.xml"
             }
 
             post {

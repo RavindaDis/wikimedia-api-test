@@ -38,30 +38,30 @@ public abstract class ApiBase {
     /**
      * Send a basic get request with a path param
      *
-     * @param endpoint - endpoint as a String
+     * @param endpoint  - endpoint as a String
      * @param pathParam - path parameter as a String
      * @return response
      */
     public static Response sendGetRequestWithPath(String endpoint, String pathParam) {
         return given()
                 .spec(createRequestSpec())
-            .when()
+                .when()
                 .get(endpoint.concat(pathParam));
     }
 
     /**
      * Send a basic get request with a query parameter
      *
-     * @param queryKey - key of the query parameter
+     * @param queryKey   - key of the query parameter
      * @param queryValue - value of the query parameter
-     * @param endpoint - endpoint as a String
+     * @param endpoint   - endpoint as a String
      * @return response object
      */
     public static Response sendGetRequestWithQuery(String queryKey, String queryValue, String endpoint) {
         return given()
                 .spec(createRequestSpec())
                 .queryParam(queryKey, queryValue)
-            .when()
+                .when()
                 .get(endpoint);
     }
 }

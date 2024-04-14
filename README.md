@@ -47,6 +47,13 @@ Tests can be executed using an IDE by running the src/test/resources/test-suites
 ### Reporting
 - A report will be created after each execution in: './test-output/' folder.
 
+To generate the allure reports, execute the following commands
+```bash
+allure generate --clean 
+```
+```bash
+allure serve test-output/allure-results
+```
 ### Logging
 - Log files will be created after each execution with time stamp in: './test-output/Test Execution Logs' folder
 
