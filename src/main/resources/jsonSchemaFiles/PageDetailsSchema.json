@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "key": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "latest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "timestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "timestamp"
+      ]
+    },
+    "content_model": {
+      "type": "string"
+    },
+    "license": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "title"
+      ]
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "key",
+    "title",
+    "latest",
+    "content_model",
+    "license",
+    "source"
+  ]
+}

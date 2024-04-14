@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PAGE DETAILS TEST SUITE" verbose="1">
+    <listeners>
+        <listener class-name="api.wikimedia.org.listeners.TestListener"/>
+        <listener class-name="org.testng.reporters.FailedReporter"/>
+        <listener class-name="org.testng.reporters.TestHTMLReporter"/>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+    </listeners>
+    <test name="API tests for Page Details">
+        <groups>
+            <run>
+                <include name="page-test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.wikimedia.org.tests.search.PageDetailsTest"/>
+        </classes>
+    </test>
+</suite>
